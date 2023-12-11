@@ -1,0 +1,145 @@
+/* 
+ *
+ * Style for background
+ *
+ */
+
+body{
+	background-color: rgb(240,240,240,1) !important;
+	margin:0;
+	padding:0;
+	border:0;
+}
+
+
+/* 
+ *
+ * Styles container for all login elements 
+ *
+ */
+
+.login-box-container{
+	background: rgb(255,255,255,1);
+	display: block;
+	position:absolute;
+	left:50%;
+	top:50%;
+	transform: translate(-50%, -50%);
+	height:85%;
+	width: 30%;
+	-webkit-box-shadow: 0 0 15px rgb(112,112,112,1);
+	box-shadow: 0 0 15px rgb(112,112,112,1);
+}
+
+
+/*
+ *
+ * Style for login header and text
+ *
+ */
+
+.login-header-container{
+	display:block;
+	position:relative;
+	
+}
+
+.login-text{
+	text-align: center;
+	font-family: 'Afacad', sans-serif;
+	margin-bottom:5%;
+	padding:0;
+	border:0;
+}
+
+.login-description{
+	text-align: justify;
+	margin-top: 2%;
+	border:0;
+	padding-top: 0;
+	padding-left:9%;
+	padding-right: 9%;
+	margin-bottom:9%;
+	font-family: 'Afacad', sans-serif;
+}
+
+
+/*
+ *
+ * Styles for form container
+ *
+ */
+ 
+.form-container{
+	display:flexbox;
+	flex-direction: column;
+	position: relative;
+}
+
+.userpass-container{
+	display:flexbox;
+	flex-direction: column;
+	position: relative;
+	margin-left: 10%;
+}
+
+.label-header{
+	margin-bottom: 1%;
+	font-size: larger;
+	font-family: 'Afacad', sans-serif;
+}
+
+.input-container{
+	width:80%;
+	padding-top: 4%;
+	padding-bottom: 4%;
+	padding-left: 2%;
+	padding-right: 2%;
+	border:0;
+	background-color:  rgb(211,211,211,0.3) !important;
+}
+
+.submit-button-container{
+	width:80%;
+	margin: 10%;
+	margin-top: 10%;
+	margin-bottom: 15%;
+	position: relative;
+	display: flex;
+	justify-content: center;
+}
+
+.submit-button{
+	width:80%;
+	padding-top: 5%;
+	padding-bottom: 5%;
+	text-align: center;
+	color: rgb(255,255,255,1);
+	font-size: large;
+	font-family: 'Afacad', sans-serif;
+	font-weight: bold;
+	letter-spacing: 1px;
+	border:0;
+	border-radius:50px;
+	background: rgb(66,204,236);
+	background: linear-gradient(90deg, rgba(66,204,236,1) 0%, rgba(57,221,132,1) 47%, rgba(246,255,22,1) 100%);
+}
+
+/*
+ *	Styles for Login Failed Text
+ */
+ 
+ .login-failed-container{
+	display:flexbox;
+	flex-direction: column;
+	position: relative;
+	margin-left: 10%;
+}
+
+.login-failed-text{
+	margin-top: 2%;
+	padding-left: 2%;
+	font-size:medium;
+	font-family: 'Afacad', sans-serif;
+	color: rgb(211, 17, 17,1);
+}
