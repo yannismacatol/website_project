@@ -13,8 +13,8 @@ import website_project_model.Users;
 /**
  * Servlet implementation class UsersServlet
  */
-@WebServlet("/welcome")
-public class UsersServlet extends HttpServlet {
+@WebServlet("/login")
+public class LoginServlet extends HttpServlet {
 	
 	//parameters
 	private static final long serialVersionUID = 1L;
@@ -25,7 +25,7 @@ public class UsersServlet extends HttpServlet {
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UsersServlet() {
+    public LoginServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -55,8 +55,9 @@ public class UsersServlet extends HttpServlet {
 		boolean check = usersDao.authenticateLogin(user);
 		
 		if(check) {			
-			request.getRequestDispatcher("/WEB-INF/views/home.jsp").forward(request, response);
-			//response.sendRedirect("/WEB-INF/views/home.jsp");
+			//request.getRequestDispatcher("/welcome").forward(request, response);
+			response.sendRedirect("/website_project/welcome");
+			return;
 			
 		} else {
 			String message = "Wrong username or password.";

@@ -19,7 +19,7 @@
 			<p class = "login-description">If you are a member, you can use your registered username and password to login.</p>
 		</div>
 		
-		<form class = "form-container" action="<%=request.getContextPath()%>/welcome" method="post">
+		<form class = "form-container" action="<%=request.getContextPath()%>/login" method="post">
 			<div class="userpass-container">
 				<p class="label-header">Username</p>
 				<input id = "username" class="input-container" type="text" name="username"/> 
