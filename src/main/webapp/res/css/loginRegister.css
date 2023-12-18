@@ -120,6 +120,7 @@ body{
 	letter-spacing: 1px;
 	border:0;
 	border-radius:50px;
+	cursor:pointer;
 }
 
 .submit-button-v1{
@@ -153,11 +154,11 @@ body{
 
 /*
  *
- * Styles for the register redirect button
+ * Styles for the redirect button
  *
  */
  
- .register-button-container{
+ .redirect-button-container{
  	width:100%;
  	margin-top:1%;
 	justify-content: center;
@@ -165,7 +166,7 @@ body{
 	display: flex;
  }
  
- .register-button{
+ .redirect-button{
 	text-align: center;
 	color: rgb(104,104,104,1);
 	background-color: rgb(0,0,0,0);
@@ -174,7 +175,7 @@ body{
 	font-family: 'Afacad', sans-serif;
  }
  
-.register-button:hover{
+.redirect-button:hover{
 	text-decoration: underline;
 	cursor:pointer;
 }

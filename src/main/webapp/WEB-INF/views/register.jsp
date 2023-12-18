@@ -37,6 +37,10 @@
 				<input class = "submit-button submit-button-v2" type="submit" value="SIGN UP"/>
 			</div>
 		</form>
+		
+		<form class="redirect-button-container" action="<%=request.getContextPath()%>/login" method="get">
+			<input class = "redirect-button" type="submit" value = "Go back to Login Page."/>
+		</form>
 
 	</div>
 </body>

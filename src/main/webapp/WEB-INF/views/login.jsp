@@ -39,8 +39,8 @@
 			</div>
 		</form>
 		
-		<form class="register-button-container" action="<%=request.getContextPath()%>/register" method="get">
-			<input class = "register-button" type="submit" value = "New user? Sign up here!"/>
+		<form class="redirect-button-container" action="<%=request.getContextPath()%>/register" method="get">
+			<input class = "redirect-button" type="submit" value = "New user? Sign up here!"/>
 		</form>
 
 	</div>
