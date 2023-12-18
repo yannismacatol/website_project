@@ -38,6 +38,10 @@
 				<input class = "submit-button" type="submit" value="LOGIN"/>
 			</div>
 		</form>
+		
+		<form class="register-button-container" action="<%=request.getContextPath()%>/register" method="post">
+			<input class = "register-button" type="submit" value = "New user? Sign up here!"/>
+		</form>
 
 	</div>
 	

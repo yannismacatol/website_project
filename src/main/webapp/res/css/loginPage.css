@@ -101,9 +101,8 @@ body{
 
 .submit-button-container{
 	width:80%;
-	margin: 10%;
+	margin-left: 10%;
 	margin-top: 10%;
-	margin-bottom: 15%;
 	position: relative;
 	display: flex;
 	justify-content: center;
@@ -142,4 +141,32 @@ body{
 	font-size:medium;
 	font-family: 'Afacad', sans-serif;
 	color: rgb(211, 17, 17,1);
+}
+
+/*
+ *
+ * Styles for the register redirect button
+ *
+ */
+ 
+ .register-button-container{
+ 	width:100%;
+ 	margin-top:1%;
+	justify-content: center;
+	position: relative;
+	display: flex;
+ }
+ 
+ .register-button{
+	text-align: center;
+	color: rgb(104,104,104,1);
+	background-color: rgb(0,0,0,0);
+	border: 0;
+	font-size:medium;
+	font-family: 'Afacad', sans-serif;
+ }
+ 
+.register-button:hover{
+	text-decoration: underline;
+	cursor:pointer;
 }
