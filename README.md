@@ -6,7 +6,7 @@ This project is still under development and not yet finished. Current features i
 1. Login Page.
 2. Homepage Placeholder.
 3. Register button on the Login Page.
-4. User registration page placeholder.
+4. Working User registration page.
 
 A local database is used and the project only runs locally.
 
@@ -18,4 +18,4 @@ A local database is used and the project only runs locally.
 Operating System: Windows 11
 
 # Video Demo for Current Commit
-Link: N/A as of the moment
+Link: https://youtu.be/Zo-qRx1XaEI
