@@ -5,6 +5,8 @@ Self-learning project to explore creating websites using Java (JSP + Servlets) a
 This project is still under development and not yet finished. Current features include the following:
 1. Login Page.
 2. Homepage Placeholder.
+3. Register button on the Login Page.
+4. User registration page placeholder.
 
 A local database is used and the project only runs locally.
 
@@ -16,4 +18,4 @@ A local database is used and the project only runs locally.
 Operating System: Windows 11
 
 # Video Demo for Current Commit
-Link: https://youtu.be/Lg8smqAHt_c 
+Link: N/A as of the moment
