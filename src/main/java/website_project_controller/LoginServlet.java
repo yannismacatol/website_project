@@ -6,6 +6,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import website_project_dao.UsersDAO;
 import website_project_model.Users;
@@ -35,8 +36,10 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.getRequestDispatcher("/WEB-INF/views/loginPage.jsp").forward(request, response); 
-		//response.sendRedirect("/WEB-INF/views/loginPage.jsp");
+		request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response); 
+		//response.sendRedirect("/WEB-INF/views/login.jsp");
+		HttpSession session = request.getSession();
+		session.setAttribute("urlAccess", false);
 	}
 
 	/**
@@ -50,17 +53,21 @@ public class LoginServlet extends HttpServlet {
 		user.setUsername(username);
 		user.setPassword(password);
 		
+		HttpSession session = request.getSession();
+		session.setAttribute("username", user.getUsername());
+		session.setAttribute("password", user.getPassword());
+		
 		boolean checkLogin = usersDao.authenticateLogin(user);
 		
-		if(checkLogin) {			
-			//request.getRequestDispatcher("/welcome").forward(request, response);
+		if(checkLogin) {
+			session.setAttribute("urlAccess", true);
 			response.sendRedirect("/website_project/welcome");
 			return;
 			
 		} else {
 			String message = "Wrong username or password.";
 			request.setAttribute("message", message);
-			request.getRequestDispatcher("/WEB-INF/views/loginPage.jsp").forward(request, response); //<p>${message}</p> in loginPage.jsp;
+			request.getRequestDispatcher("/WEB-INF/views/login.jsp").forward(request, response); //<p>${message}</p> in login.jsp;
 			
 		}
 		

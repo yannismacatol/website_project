@@ -18,7 +18,7 @@ body{
  *
  */
 
-.login-box-container{
+.content-box-container{
 	background: rgb(255,255,255,1);
 	display: block;
 	position:absolute;
@@ -34,17 +34,17 @@ body{
 
 /*
  *
- * Style for login header and text
+ * Style for content header and text
  *
  */
 
-.login-header-container{
+.content-header-container{
 	display:block;
 	position:relative;
 	
 }
 
-.login-text{
+.content-text{
 	text-align: center;
 	font-family: 'Afacad', sans-serif;
 	margin-bottom:5%;
@@ -52,7 +52,7 @@ body{
 	border:0;
 }
 
-.login-description{
+.content-description{
 	text-align: justify;
 	margin-top: 2%;
 	border:0;
@@ -120,22 +120,30 @@ body{
 	letter-spacing: 1px;
 	border:0;
 	border-radius:50px;
+}
+
+.submit-button-v1{
 	background: rgb(66,204,236);
 	background: linear-gradient(90deg, rgba(66,204,236,1) 0%, rgba(57,221,132,1) 47%, rgba(246,255,22,1) 100%);
 }
 
+.submit-button-v2{
+	background: rgb(127,251,214);
+	background: linear-gradient(90deg, rgba(127,251,214,1) 0%, rgba(240,134,188,1) 47%, rgba(225,179,246,1) 100%);
+}
+
 /*
- *	Styles for Login Failed Text
+ *	Styles for Action Failed Text
  */
  
- .login-failed-container{
+ .action-failed-container{
 	display:flexbox;
 	flex-direction: column;
 	position: relative;
 	margin-left: 10%;
 }
 
-.login-failed-text{
+.action-failed-text{
 	margin-top: 2%;
 	padding-left: 2%;
 	font-size:medium;

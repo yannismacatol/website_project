@@ -31,10 +31,10 @@ public class UsersDAO{
 	
 	//Register a new user into database.
 	public boolean registerUser(Users user) {
+		Connection c = createConnection();
 		PreparedStatement addUser = null;
-		try(Connection c = createConnection();) {
-			
-			if(checkUserExists(user, c)) {
+		try(c) {
+			if(checkUserExists(user)) {
 				return false;
 			}
 			else {
@@ -74,7 +74,8 @@ public class UsersDAO{
 
 	
 	//Check if the username exists
-	private boolean checkUserExists(Users user, Connection c) {
+	private boolean checkUserExists(Users user) {
+		Connection c = createConnection();
 		PreparedStatement selectUsernamePassword = null;
 		try(c) {
 				selectUsernamePassword = c.prepareStatement("SELECT id FROM users_db.users WHERE username = ?");

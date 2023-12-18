@@ -6,9 +6,10 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
-//import website_project_dao.UsersDAO;
-//import website_project_model.Users;
+import website_project_dao.UsersDAO;
+import website_project_model.Users;
 
 /**
  * Servlet implementation class RegisterServlet
@@ -16,8 +17,8 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet("/register")
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-	//private UsersDAO usersDao = new UsersDAO();
-	//private Users user = new Users();
+	private UsersDAO usersDao = new UsersDAO();
+	private Users user = new Users();
        
     /**
      * @see HttpServlet#HttpServlet()
@@ -32,7 +33,9 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		response.getWriter().append("Redirected to User Registration Page :)");
+		request.getRequestDispatcher("/WEB-INF/views/register.jsp").forward(request, response); 
+		HttpSession session = request.getSession();
+		session.setAttribute("urlAccess", false);
 	}
 
 	/**
@@ -40,21 +43,21 @@ public class RegisterServlet extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		doGet(request, response);
 		
-		/*String username = request.getParameter("username");
+		String username = request.getParameter("username");
 		String password = request.getParameter("password");
 		
 		user.setUsername(username);
 		user.setPassword(password);
 		
-		//For easier debugging
-		System.out.println(user.getUsername() + " " + user.getPassword());
+		HttpSession session = request.getSession();
+		session.setAttribute("username", user.getUsername());
+		session.setAttribute("password", user.getPassword());
 		
 		boolean checkRegister = usersDao.registerUser(user);
 		
 		if(checkRegister) {			
-			//request.getRequestDispatcher("/welcome").forward(request, response);
+			session.setAttribute("urlAccess", true);
 			response.sendRedirect("/website_project/welcome");
 			return;
 			
@@ -62,7 +65,8 @@ public class RegisterServlet extends HttpServlet {
 			String message = "User already exists.";
 			request.setAttribute("message", message);
 			request.getRequestDispatcher("/WEB-INF/views/register.jsp").forward(request, response); //<p>${message}</p> in register.jsp;
-		}*/
+		}
+		
 	}
-
+	
 }
