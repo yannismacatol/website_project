@@ -18,4 +18,4 @@ A local database is used and the project only runs locally.
 Operating System: Windows 11
 
 # Video Demo for Current Commit
-Link: N/A as of the moment
+Link: https://youtu.be/Zo-qRx1XaEI
